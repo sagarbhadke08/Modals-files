@@ -1,20 +1,6 @@
 $(document).ready(function () {
   $("#showButton").attr("disabled", true);
 
-  function updateList() {
-    var fileInput = document.getElementById('file');
-    var files = fileInput.files;
-    var fileList = document.getElementById('fileList');
-    fileList.innerHTML = '';
-
-    for (var i = 0; i < files.length; i++) {
-        var fileName = files[i].name;
-        var listItem = document.createElement('div');
-        listItem.textContent = fileName;
-        fileList.appendChild(listItem);
-    }
-}
-
 
   $(document).on("click", ".delete-image", function () {
     var imageId = $(this).data("image-id");
