@@ -40,10 +40,10 @@
                 <button class="btn btn-outline-secondary" name="submit" type="submit" id="inputGroupFileAddon04">Upload</button>
               </div>
               <div id="fileList">
-              <!-- File names will be displayed here -->
-            </div>
+                <!-- File names will be displayed here -->
+              </div>
             </form>
-           
+
             <button class="btn btn-primary show-certificates-btn" id="showButton">Show</button>
           </div>
         </div>
@@ -70,19 +70,19 @@
 
   <script src="script.js"></script>
   <script>
-      function updateList() {
-    var fileInput = document.getElementById('file');
-    var files = fileInput.files;
-    var fileList = document.getElementById('fileList');
-    fileList.innerHTML = '';
+    function updateList() {
+      var fileInput = document.getElementById('file');
+      var files = fileInput.files;
+      var fileList = document.getElementById('fileList');
+      fileList.innerHTML = '';
 
-    for (var i = 0; i < files.length; i++) {
+      for (var i = 0; i < files.length; i++) {
         var fileName = files[i].name;
         var listItem = document.createElement('div');
         listItem.textContent = fileName;
         fileList.appendChild(listItem);
+      }
     }
-}
   </script>
 </body>
 
