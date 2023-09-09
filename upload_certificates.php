@@ -23,7 +23,7 @@ $sql = "INSERT INTO attachment_path1 (fileId, fileName) VALUES (?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("is", $fileId, $fileName);
 
-for ($i = 0; $i < $file_count; $i++) {
+for ($i = 0; $i < $file_count; $i++) { 
     $fileName = $attachmentfile[$i];
     $tmp_name = $tmp_names[$i];
     $folder = "./files/" . $fileName;
